@@ -1,3 +1,11 @@
+# Project 1, Exploratory Data Analysis
+
+### Instructions
+
+* Clone REPO or download individual files for plot1-plot4
+* source() each file to generate the plot
+* Requires dplyr and data.table packages
+
 ## Introduction
 
 This assignment uses data from
