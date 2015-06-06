@@ -9,7 +9,7 @@ if(!file.exists(fname)) {
   destinationFile <- "exdata-data-household_power_consumption.zip"
   download.file(URL, destinationFile)
   dateDownloaded <- date()
-  unzip(fileDest, overwrite = FALSE)
+  unzip(destinationFile, overwrite = FALSE)
 }
 
 #read in to data frame
@@ -22,7 +22,7 @@ subData_DT <- tbl_df(subData_DF)
 
 #convert numeric rows to numerical data format
 index <- 3:9
-for (j in index) set (subData_DT,j=j,value=as.numeric(subData[[j]]))
+for (j in index) set (subData_DT,j=j,value=as.numeric(subData_DT[[j]]))
 
 #build date string and convert to POSIXct
 fullDateString <- paste(subData_DT$Date,subData_DT$Time)
